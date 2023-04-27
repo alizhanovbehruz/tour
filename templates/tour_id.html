@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{%load static%}
+
+
+{%block content%}
+
+<main class="container">
+
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+        <img data-image="red" style="width:600px; height:560px; margin:50px 0px; position: relative;" class="active"
+             src="{{ post.image.url }}" alt="">
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+            <span>Tur Paket</span>
+            <h1>{{post.name}}</h1>
+            <p>{{post.description}}</p>
+        </div>
+
+        <!-- Product Configuration -->
+
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+            <span>{{post.price}}$</span>
+            <a href="#" class="cart-btn">Bog'lanib sotib olish</a>
+        </div>
+    </div>
+</main>
+
+<!-- Scripts -->
+{%endblock%}
+
