@@ -27,4 +27,8 @@ def hotels(request):
     return render(request,'hotels.html')
 
 def contact(request):
-    return render(request,'contact.html')
+    post = Contacts.objects.get(pk=1)
+    context = {
+        'post':post
+    }
+    return render(request,'contact.html',context=context)

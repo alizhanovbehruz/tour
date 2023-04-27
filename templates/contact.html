@@ -10,9 +10,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Contact Us				
+								Biz bilan bog'lanish
 							</h1>	
-							<p class="text-white link-nav"><a href="{% url 'home'%}">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'contact' %}"> Contact Us</a></p>
+							<p class="text-white link-nav"><a href="{% url 'home'%}">Asosiy </a>  <span class="lnr lnr-arrow-right"></span>  <a href="{% url 'contact' %}"> Kontakt</a></p>
 						</div>	
 					</div>
 				</div>
@@ -30,9 +30,9 @@
 									<span class="lnr lnr-home"></span>
 								</div>
 								<div class="contact-details">
-									<h5>Binghamton, New York</h5>
+									<h5>{{post.location}}</h5>
 									<p>
-										4343 Hinkle Deegan Lake Road
+										{{post.home_numb}}
 									</p>
 								</div>
 							</div>
@@ -41,8 +41,8 @@
 									<span class="lnr lnr-phone-handset"></span>
 								</div>
 								<div class="contact-details">
-									<h5>00 (958) 9865 562</h5>
-									<p>Mon to Fri 9am to 6 pm</p>
+									<h5>{{post.numb_phone}}</h5>
+									<p>{{post.data_works}}</p>
 								</div>
 							</div>
 							<div class="single-contact-address d-flex flex-row">
@@ -50,8 +50,8 @@
 									<span class="lnr lnr-envelope"></span>
 								</div>
 								<div class="contact-details">
-									<h5>support@colorlib.com</h5>
-									<p>Send us your query anytime!</p>
+									<h5>{{post.email}}</h5>
+									<p>Istalgan vaqtda bizga so'<rovingizni></rovingizni> yuboring!</p>
 								</div>
 							</div>														
 						</div>
