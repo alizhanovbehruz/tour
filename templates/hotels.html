@@ -20,6 +20,51 @@
 			<!-- End banner Area -->	
 
 			<!-- Start destinations Area -->
+			<section class="book-form" id="book-form" style = 'margin-top:5px;'>
+
+    			<form action="">
+        			<div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            			<label style="color:#29d9d5">Qayerdan?</label>
+            			<input type="text" placeholder="joy nomi" list="programmingLanguages" value="">
+						<div class="text-container">
+
+            			<datalist id="programmingLanguages">
+                			{% for post in posts%}
+							<option value="{{post.fly_from}}">{{post.fly_from}}</option>
+                			{%endfor%}
+            			</datalist>
+						</div>
+        			</div>
+					<div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            			<label style="color:#29d9d5">Qayerga?</label>
+            			<input type="text" placeholder="joy nomi" list="programmingLanguages2" value="">
+						<div class="text-container">
+
+            			<datalist id="programmingLanguages2">
+							{% for post in posts%}
+								{%if post.fly_for in not lis%}
+									{lis.append(post.fly_for)}
+									<option value="{{post.fly_for}}">{{post.fly_for}}</option>
+								{%endif%}
+                			{%endfor%}
+            			</datalist>
+						</div>
+        			</div>
+        			</div>
+        			<div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+            			<label style="color:#29d9d5">Qachon?</label>
+            			<input type="date" value="">
+					</div>
+        			<div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+            			<label style="color:#29d9d5">Qancha Odam?</label>
+            			<input type="number" placeholder="sayohatchilar soni" value="">
+        			</div>
+        			<input data-aos="zoom-in" data-aos-delay="600" type="submit" value="Izlash" class="btn">
+    			</form>
+				<div style="positions: top;">
+				<h1 style="position:; color:#29d9d5;">Mashhur yo'nalishlar</h1>
+				</div>
+			</section>
 
 			<section class="price-area section-gap">
 				<div class="container">
@@ -27,7 +72,7 @@
 		                <div class="menu-content pb-70 col-lg-8">
 		                    <div class="title text-center">
 		                        <h1 class="mb-10">Мы предлагаем доступные цены</h1>
-		                        <p>Хорошо образованные, интеллигентные люди, особенно ученые, во все времена заметно демонстрировали.</p>
+		                        <p >Хорошо образованные, интеллигентные люди, особенно ученые, во все времена заметно демонстрировали.</p>
 		                    </div>
 		                </div>
 		            </div>
@@ -152,4 +197,14 @@
 				</div>	
 			</section>
 			<!-- End home-about Area -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 800,
+        offset:150,
+    });
+
+</script>
 {%endblock%}

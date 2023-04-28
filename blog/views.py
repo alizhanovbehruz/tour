@@ -24,7 +24,13 @@ def pack_show(request,post_id):
 
 
 def hotels(request):
-    return render(request,'hotels.html')
+    posts = aviatickets.objects.all()
+    context = {
+        'posts':posts,
+        'lis':[],
+    }
+
+    return render(request,'hotels.html',context=context)
 
 def contact(request):
     post = Contacts.objects.get(pk=1)
