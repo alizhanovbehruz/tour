@@ -9,8 +9,8 @@
 
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
-        <img data-image="red" style="width:600px; height:560px; margin:50px 0px; position: relative;" class="active"
-             src="{{ post.image.url }}" alt="">
+        <img data-image="red" style="width:600px; height:560px; margin:50px 0px; position: relative;  border-radius: 1%" class="active"
+             src="{{ i.image.url }}" alt="">
     </div>
 
 
@@ -20,18 +20,61 @@
         <!-- Product Description -->
         <div class="product-description">
             <span>Tur Paket</span>
-            <h1>{{post.name}}</h1>
-            <p>{{post.description}}</p>
+            <h1>{{i.name}}</h1><br>
+			<p>{{i.description}}</p>
+			<div class="details" style="
+        	border: 2px solid #29d9d5;
+        	background-color: #fffafa;
+  			border-radius: 5px;
+  			padding:2rem 5rem;
+			width: 30rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+            grid-auto-rows: auto;
+            ">
+			<p><div><b style="font-weight: bold;">Davomiyligi</b></p>
+											{{i.duration}}</div><hr>
+			<p><div><b style="font-weight: bold;">Aeroport</b></p>
+											{{i.airport}}</div><hr>
+			<p><div><b style="font-weight: bold;">Qo'shimchalar</b></p>
+											{{i.extras}}</div><hr>
+			<p><div><b style="font-weight: bold;">Sana</b></p>
+											{{i.date}}</div>
+			</div>
+<!--            <ul  class="package-list">-->
+<!--										<li class="d-flex justify-content-between align-items-center">-->
+<!--											<span><b style="font-weight: bold; color:black;">Davomiyligi</b></span>-->
+<!--											<span>{{i.duration}}</span>-->
+<!--										</li>-->
+<!--										<li class="d-flex justify-content-between align-items-center">-->
+<!--											<span><b style="font-weight: bold; color:black;">Sana</b></span>-->
+<!--											<span>{{i.date}}</span>-->
+<!--										</li>-->
+<!--										<li class="d-flex justify-content-between align-items-center">-->
+<!--											<span><b style="font-weight: bold; color:black;">Aeroport</b></span>-->
+<!--											<span>{{i.airport}}</span>-->
+<!--										</li>-->
+<!--										<li class="d-flex justify-content-between align-items-center">-->
+<!--											<span><b style="font-weight: bold; color:black;">Qo'shimchalar</b></span>-->
+<!--											<span>{{i.extras}}</span>-->
+<!--										</li>-->
+<!--										<li class="d-flex justify-content-between align-items-center">-->
+<!--											<span><b style="font-weight: bold; color:black;">Bir kishi uchun narx</b></span>-->
+<!--											<a  class="price-btn">${{i.price}}</a>-->
+<!--										</li>-->
+<!--									</ul>-->
+
         </div>
 
-        <!-- Product Configuration -->
 
 
-        <!-- Product Pricing -->
+
+
         <div class="product-price">
-            <span>{{post.price}}$</span>
-            <a href="#" class="cart-btn">Bog'lanib sotib olish</a>
+            <span>{{i.price}}$</span>
+            <a href="{% url 'contact'%}" class="cart-btn">Bog'lanib sotib olish</a>
         </div>
+
     </div>
 </main>
 

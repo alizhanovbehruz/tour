@@ -25,9 +25,10 @@ class aviatickets(models.Model):
     description = models.CharField(max_length=250)
     price = models.DecimalField(max_digits=10000,decimal_places=2)
     fly_from = models.CharField(max_length=50)
-    fly_for = models.CharField(max_length=50)
+    fly_to = models.CharField(max_length=50)
     flies_time =models.TimeField()
-    fly_start_time = models.DateTimeField()
+    date = models.DateField()
+    number_tickets = models.IntegerField(null=True)
 
 
 
